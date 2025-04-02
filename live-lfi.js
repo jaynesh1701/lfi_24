@@ -1,4 +1,4 @@
-console.log("live file connected");
+console.log("git live file connected");
 
 //Initialize Lenis for smooth scrolling
 // const lenis = new Lenis();
