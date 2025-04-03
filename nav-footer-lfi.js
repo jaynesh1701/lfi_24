@@ -1,4 +1,4 @@
-console.log("nav-footer-test-commited-2")
+console.log("nav-footer-test-commited-3")
 
 // Global variables
 let sketches = [];
@@ -187,7 +187,9 @@ const $navLogo = $navBar.find(".nav_logo");
 const $navLogo_dark = $navBar.find(".nav_logo_svg-dark"); 
 const $navLogo_light = $navBar.find(".nav_logo_svg-light");
 const $navMenuButton = $navBar.find(".nav_menu_button");
-const $navButtonLines = $navMenuButton.find(".nav_hamburger_line")
+const $navButtonLines = $navBar.find(".nav_hamburger_line")
+
+console.log($navButtonLines);
 
 const duration = 0.2;
 
@@ -211,7 +213,7 @@ $navTrigger.each(function () {
     .to($navLogo_light, { opacity: 1, duration: duration }, "0")
     .to($navLogo_dark, { opacity: 0, duration: duration }, "0")
     .to($navMenuButton, { borderColor: "rgba(241, 239, 233, 0.2)", duration: duration }, "0")
-    .to($navButtonLines, { backgroundcolor: "rgb(241, 239, 233)", duration: duration }, "0")
+    .to($navButtonLines, { backgroundColor: "rgb(248, 248, 247)", duration: duration }, "0")
     
 });
 
