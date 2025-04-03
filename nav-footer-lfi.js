@@ -202,7 +202,7 @@ $navTrigger.each(function () {
 
   tl.to($navBg, 
     { backgroundColor: "rgba(16, 25, 31, 0.4)",
-      borderColor: "rgba(16, 25, 31, 0.71)", // Uncomment and set a value if needed
+      //borderColor: "rgba(16, 25, 31, 0.71)", // Uncomment and set a value if needed
       duration: duration })
     .to($navLinks, { "--_interations---nav-link-color":"var(--lfi-light--background)", duration: duration },"0")
     .to($navLogo_light, { opacity: 1, duration: duration }, "0")
