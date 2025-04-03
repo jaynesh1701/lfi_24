@@ -1,4 +1,4 @@
-console.log("git live file connected");
+console.log("git live file connected -1");
 
 //Initialize Lenis for smooth scrolling
 // const lenis = new Lenis();
@@ -110,108 +110,225 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // service card hover animation
-    gsap.utils.toArray(".service-card-item").forEach(item => {
-        let paraWrap = item.querySelector(".service-card-para-wrap");
-        let bgGradient = item.querySelector(".service-card-bg-gradient");
-        let paraText = item.querySelector(".service-card-para");
-        let paraBgimage = item.querySelector(".service-card-item-image");
-        let cardTitle = item.querySelector(".service-card-title");
+    // gsap.utils.toArray(".service-card-item").forEach(item => {
+    //     let paraWrap = item.querySelector(".service-card-para-wrap");
+    //     let bgGradient = item.querySelector(".service-card-bg-gradient");
+    //     let paraText = item.querySelector(".service-card-para");
+    //     let paraBgimage = item.querySelector(".service-card-item-image");
+    //     let cardTitle = item.querySelector(".service-card-title");
 
-        let ease = "power3.inOut";
+    //     let ease = "power3.inOut";
 
-        if (!paraWrap || !bgGradient) return;
+    //     if (!paraWrap || !bgGradient) return;
 
-        gsap.set(paraWrap, { gridTemplateRows: "0fr" });
-        gsap.set(cardTitle, { marginBottom: "-20px" });
-        gsap.set(paraText, { opacity: 0 });
-        gsap.set(bgGradient, {
-            backgroundImage: "linear-gradient(0deg, #0B1B21 0%, rgba(28, 80, 99, 0.00) 45.12%)"
-        });
-        gsap.set(paraBgimage, { filter: "blur(0px)", scale: 1 });
+    //     gsap.set(paraWrap, { gridTemplateRows: "0fr" });
+    //     gsap.set(cardTitle, { marginBottom: "-20px" });
+    //     gsap.set(paraText, { opacity: 0 });
+    //     gsap.set(bgGradient, {
+    //         backgroundImage: "linear-gradient(0deg, #0B1B21 0%, rgba(28, 80, 99, 0.00) 45.12%)"
+    //     });
+    //     gsap.set(paraBgimage, { filter: "blur(0px)", scale: 1 });
 
-        let tl = gsap.timeline({ paused: true })
-            .to(paraWrap, {
-                duration: 1,
-                gridTemplateRows: "1fr",
-                ease: ease
-            }, 0)
-            .to(paraText, {
-                duration: 0.8,
-                opacity: 1,
-                ease: ease// add delay
-            }, 0.2)
-            .to(cardTitle, {
-                duration: 0.4,
-                marginBottom: "0px",
-                ease: ease// add delay
-            }, 0.2)
-            .to(paraBgimage, {
-                duration: 1,
-                filter: "blur(10px)",
-                scale: 1.05,
-                ease: ease
-            }, 0)
-            .to(bgGradient, {
-                duration: 0.8,
-                backgroundImage: "linear-gradient(0deg, #0B1B21 8%, rgba(28, 80, 99, 0.00) 98.12%)",
-                ease: ease
-            }, 0);
+    //     let tl = gsap.timeline({ paused: true })
+    //         .to(paraWrap, {
+    //             duration: 1,
+    //             gridTemplateRows: "1fr",
+    //             ease: ease
+    //         }, 0)
+    //         .to(paraText, {
+    //             duration: 0.8,
+    //             opacity: 1,
+    //             ease: ease// add delay
+    //         }, 0.2)
+    //         .to(cardTitle, {
+    //             duration: 0.4,
+    //             marginBottom: "0px",
+    //             ease: ease// add delay
+    //         }, 0.2)
+    //         .to(paraBgimage, {
+    //             duration: 1,
+    //             filter: "blur(10px)",
+    //             scale: 1.05,
+    //             ease: ease
+    //         }, 0)
+    //         .to(bgGradient, {
+    //             duration: 0.8,
+    //             backgroundImage: "linear-gradient(0deg, #0B1B21 8%, rgba(28, 80, 99, 0.00) 98.12%)",
+    //             ease: ease
+    //         }, 0);
 
-        item.addEventListener("mouseenter", () => tl.play());
-        item.addEventListener("mouseleave", () => tl.timeScale(1.5).reverse());
-    });
+    //     item.addEventListener("mouseenter", () => tl.play());
+    //     item.addEventListener("mouseleave", () => tl.timeScale(1.5).reverse());
+    // });
 
-    // Duplicate animation for "-2" class variants
-    gsap.utils.toArray(".service-card-item-2").forEach(item => {
-        let paraWrap = item.querySelector(".service-card-para-wrap-2");
-        let bgGradient = item.querySelector(".service-card-bg-gradient-2");
-        let paraText = item.querySelector(".service-card-para-2");
-        let paraBgimage = item.querySelector(".service-card-item-image-2");
-        let cardTitle = item.querySelector(".service-card-title-2");
+    // // Duplicate animation for "-2" class variants
+    // gsap.utils.toArray(".service-card-item-2").forEach(item => {
+    //     let paraWrap = item.querySelector(".service-card-para-wrap-2");
+    //     let bgGradient = item.querySelector(".service-card-bg-gradient-2");
+    //     let paraText = item.querySelector(".service-card-para-2");
+    //     let paraBgimage = item.querySelector(".service-card-item-image-2");
+    //     let cardTitle = item.querySelector(".service-card-title-2");
 
-        let ease = "power3.inOut";
+    //     let ease = "power3.inOut";
 
-        if (!paraWrap || !bgGradient) return;
+    //     if (!paraWrap || !bgGradient) return;
 
-        gsap.set(paraWrap, { gridTemplateRows: "0fr" });
-        gsap.set(cardTitle, { marginBottom: "-20px" });
-        gsap.set(paraText, { opacity: 0 });
-        gsap.set(bgGradient, {
-            backgroundImage: "linear-gradient(0deg, #0B1B21 0%, rgba(28, 80, 99, 0.00) 45.12%)"
-        });
-        gsap.set(paraBgimage, { filter: "blur(0px)", scale: 1 });
+    //     gsap.set(paraWrap, { gridTemplateRows: "0fr" });
+    //     gsap.set(cardTitle, { marginBottom: "-20px" });
+    //     gsap.set(paraText, { opacity: 0 });
+    //     gsap.set(bgGradient, {
+    //         backgroundImage: "linear-gradient(0deg, #0B1B21 0%, rgba(28, 80, 99, 0.00) 45.12%)"
+    //     });
+    //     gsap.set(paraBgimage, { filter: "blur(0px)", scale: 1 });
 
-        let tl = gsap.timeline({ paused: true })
-            .to(paraWrap, {
-                duration: 1,
-                gridTemplateRows: "1fr",
-                ease: ease
-            }, 0)
-            .to(paraText, {
-                duration: 0.8,
-                opacity: 1,
-                ease: ease
-            }, 0.2)
-            .to(cardTitle, {
-                duration: 0.4,
-                marginBottom: "0px",
-                ease: ease
-            }, 0.2)
-            .to(paraBgimage, {
-                duration: 1,
-                filter: "blur(10px)",
-                scale: 1.05,
-                ease: ease
-            }, 0)
-            .to(bgGradient, {
-                duration: 0.8,
-                backgroundImage: "linear-gradient(0deg, #0B1B21 8%, rgba(28, 80, 99, 0.00) 98.12%)",
-                ease: ease
-            }, 0);
+    //     let tl = gsap.timeline({ paused: true })
+    //         .to(paraWrap, {
+    //             duration: 1,
+    //             gridTemplateRows: "1fr",
+    //             ease: ease
+    //         }, 0)
+    //         .to(paraText, {
+    //             duration: 0.8,
+    //             opacity: 1,
+    //             ease: ease
+    //         }, 0.2)
+    //         .to(cardTitle, {
+    //             duration: 0.4,
+    //             marginBottom: "0px",
+    //             ease: ease
+    //         }, 0.2)
+    //         .to(paraBgimage, {
+    //             duration: 1,
+    //             filter: "blur(10px)",
+    //             scale: 1.05,
+    //             ease: ease
+    //         }, 0)
+    //         .to(bgGradient, {
+    //             duration: 0.8,
+    //             backgroundImage: "linear-gradient(0deg, #0B1B21 8%, rgba(28, 80, 99, 0.00) 98.12%)",
+    //             ease: ease
+    //         }, 0);
 
-        item.addEventListener("mouseenter", () => tl.play());
-        item.addEventListener("mouseleave", () => tl.timeScale(1.5).reverse());
-    });
+    //     item.addEventListener("mouseenter", () => tl.play());
+    //     item.addEventListener("mouseleave", () => tl.timeScale(1.5).reverse());
+    // });
+
+    function initServiceCardAnimation() {
+      if (window.matchMedia("(min-width: 1024px)").matches) { // Adjust breakpoint as needed
+          gsap.utils.toArray(".service-card-item").forEach(item => {
+              let paraWrap = item.querySelector(".service-card-para-wrap");
+              let bgGradient = item.querySelector(".service-card-bg-gradient");
+              let paraText = item.querySelector(".service-card-para");
+              let paraBgimage = item.querySelector(".service-card-item-image");
+              let cardTitle = item.querySelector(".service-card-title");
+  
+              let ease = "power3.inOut";
+  
+              if (!paraWrap || !bgGradient) return;
+  
+              gsap.set(paraWrap, { gridTemplateRows: "0fr" });
+              gsap.set(cardTitle, { marginBottom: "-20px" });
+              gsap.set(paraText, { opacity: 0 });
+              gsap.set(bgGradient, {
+                  backgroundImage: "linear-gradient(0deg, #0B1B21 0%, rgba(28, 80, 99, 0.00) 45.12%)"
+              });
+              gsap.set(paraBgimage, { filter: "blur(0px)", scale: 1 });
+  
+              let tl = gsap.timeline({ paused: true })
+                  .to(paraWrap, {
+                      duration: 1,
+                      gridTemplateRows: "1fr",
+                      ease: ease
+                  }, 0)
+                  .to(paraText, {
+                      duration: 0.8,
+                      opacity: 1,
+                      ease: ease
+                  }, 0.2)
+                  .to(cardTitle, {
+                      duration: 0.4,
+                      marginBottom: "0px",
+                      ease: ease
+                  }, 0.2)
+                  .to(paraBgimage, {
+                      duration: 1,
+                      filter: "blur(10px)",
+                      scale: 1.05,
+                      ease: ease
+                  }, 0)
+                  .to(bgGradient, {
+                      duration: 0.8,
+                      backgroundImage: "linear-gradient(0deg, #0B1B21 8%, rgba(28, 80, 99, 0.00) 98.12%)",
+                      ease: ease
+                  }, 0);
+  
+              item.addEventListener("mouseenter", () => tl.play());
+              item.addEventListener("mouseleave", () => tl.timeScale(1.5).reverse());
+          });
+  
+          // Duplicate animation for "-2" class variants
+          gsap.utils.toArray(".service-card-item-2").forEach(item => {
+              let paraWrap = item.querySelector(".service-card-para-wrap-2");
+              let bgGradient = item.querySelector(".service-card-bg-gradient-2");
+              let paraText = item.querySelector(".service-card-para-2");
+              let paraBgimage = item.querySelector(".service-card-item-image-2");
+              let cardTitle = item.querySelector(".service-card-title-2");
+  
+              let ease = "power3.inOut";
+  
+              if (!paraWrap || !bgGradient) return;
+  
+              gsap.set(paraWrap, { gridTemplateRows: "0fr" });
+              gsap.set(cardTitle, { marginBottom: "-20px" });
+              gsap.set(paraText, { opacity: 0 });
+              gsap.set(bgGradient, {
+                  backgroundImage: "linear-gradient(0deg, #0B1B21 0%, rgba(28, 80, 99, 0.00) 45.12%)"
+              });
+              gsap.set(paraBgimage, { filter: "blur(0px)", scale: 1 });
+  
+              let tl = gsap.timeline({ paused: true })
+                  .to(paraWrap, {
+                      duration: 1,
+                      gridTemplateRows: "1fr",
+                      ease: ease
+                  }, 0)
+                  .to(paraText, {
+                      duration: 0.8,
+                      opacity: 1,
+                      ease: ease
+                  }, 0.2)
+                  .to(cardTitle, {
+                      duration: 0.4,
+                      marginBottom: "0px",
+                      ease: ease
+                  }, 0.2)
+                  .to(paraBgimage, {
+                      duration: 1,
+                      filter: "blur(10px)",
+                      scale: 1.05,
+                      ease: ease
+                  }, 0)
+                  .to(bgGradient, {
+                      duration: 0.8,
+                      backgroundImage: "linear-gradient(0deg, #0B1B21 8%, rgba(28, 80, 99, 0.00) 98.12%)",
+                      ease: ease
+                  }, 0);
+  
+              item.addEventListener("mouseenter", () => tl.play());
+              item.addEventListener("mouseleave", () => tl.timeScale(1.5).reverse());
+          });
+      }
+  }
+  
+  // Run on page load
+  initServiceCardAnimation();
+  
+  // Run on window resize
+  window.addEventListener("resize", () => {
+      gsap.killTweensOf(".service-card-item, .service-card-item-2"); // Remove existing animations on resize
+      initServiceCardAnimation();
+  });
+  
 
 
     // floter scroll into view animation
