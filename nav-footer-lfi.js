@@ -1,4 +1,4 @@
-console.log("nav-footer-test-commited")
+console.log("nav-footer-test-commited-1")
 
 // Global variables
 let sketches = [];
@@ -211,7 +211,7 @@ $navTrigger.each(function () {
     .to($navLogo_light, { opacity: 1, duration: duration }, "0")
     .to($navLogo_dark, { opacity: 0, duration: duration }, "0")
     .to($navMenuButton, { borderColor: "rgba(241, 239, 233, 0.2)", duration: duration }, "0")
-    .to($navButtonLines, { borderColor: "rgba(248, 248, 247, 1)", duration: duration }, "0")
+    .to($navButtonLines, { backgroundcolor: "rgba(248, 248, 247, 1)", duration: duration }, "0")
     
 });
 
