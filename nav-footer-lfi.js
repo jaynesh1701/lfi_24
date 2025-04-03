@@ -186,6 +186,9 @@ const $navLinks = $navBar.find(".nav_contain_0 a");
 const $navLogo = $navBar.find(".nav_logo");
 const $navLogo_dark = $navBar.find(".nav_logo_svg-dark"); 
 const $navLogo_light = $navBar.find(".nav_logo_svg-light");
+const $navMenuButton = $navBar.find(".nav_menu_button");
+const $navButtonLines = $navMenuButton.find(".nav_hamburger_line")
+
 const duration = 0.2;
 
 $navTrigger.each(function () {
@@ -207,6 +210,8 @@ $navTrigger.each(function () {
     .to($navLinks, { "--_interations---nav-link-color":"var(--lfi-light--background)", duration: duration },"0")
     .to($navLogo_light, { opacity: 1, duration: duration }, "0")
     .to($navLogo_dark, { opacity: 0, duration: duration }, "0")
+    .to($navMenuButton, { borderColor: "rgba(241, 239, 233, 0.2)", duration: duration }, "0")
+    .to($navButtonLines, { borderColor: "#f8f8f7", duration: duration }, "0")
     
 });
 
